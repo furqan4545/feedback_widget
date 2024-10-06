@@ -7,7 +7,7 @@ If you like my work. Consider subscribing to the tool. I'll mean a lot. I am bui
 express my deep gratituide and love to open source community. This world runs because of you
 people.
 
-Love from Seoul. 
+### Love from Seoul. 
 
-Connect me over x.com => [!https://x.com/iamfurqanalii]
+Connect me over x.com => [https://x.com/iamfurqanalii]
 
