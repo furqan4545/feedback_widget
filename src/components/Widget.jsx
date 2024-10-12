@@ -16,10 +16,10 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
+import supabase from "@/supabaseClient";
 import tailwindstyles from "../index.css?inline";
 
-export const Widget = () => {
+export const Widget = ({ projectId }) => {
   const [open, setOpen] = useState(false);
   const [rating, setRating] = useState(0);
   const [submitted, setSubmitted] = useState(false);
@@ -33,7 +33,25 @@ export const Widget = () => {
     // Here you would typically handle the form submission,
     // such as sending the data to an API
     console.log("Form submitted");
-    setSubmitted(true);
+    const form = e.target;
+    const formData = {
+      p_project_id: projectId,
+      p_user_name: form.name.value,
+      p_user_email: form.email.value,
+      p_message: form.feedback.value,
+      // p_rating: rating,
+    };
+
+    const { data: returnedData, error } = await supabase.rpc(
+      "add_feedback",
+      formData
+    );
+    console.log(returnedData);
+    if (error) {
+      console.error(error);
+    } else {
+      setSubmitted(true);
+    }
   };
 
   return (
