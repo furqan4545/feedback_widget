@@ -29,7 +29,7 @@ export const Widget = ({ projectId }) => {
     console.log("Form submitted");
     const form = e.target;
     const formData = {
-      p_project_id: projectId,
+      p_project_id: parseInt(projectId, 10),
       p_user_name: form.name.value,
       p_user_email: form.email.value,
       p_message: form.feedback.value,
