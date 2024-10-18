@@ -78,10 +78,8 @@ export const Widget = ({ projectId }) => {
               </div>
             ) : (
               <div className="p-4 w-full">
-                <div className="text-center mb-4">
-                  <h2 className="text-lg font-semibold">
-                    Send us your feedback
-                  </h2>
+                <div className="text-center mb-2">
+                  <h2 className="text-lg font-semibold">Tell us how we did?</h2>
                 </div>
                 <form onSubmit={handleSubmit}>
                   <div className="space-y-4">
@@ -115,7 +113,7 @@ export const Widget = ({ projectId }) => {
                             type="button"
                             variant="ghost"
                             size="sm"
-                            className="p-0 hover:bg-transparent"
+                            className="p-1 hover:bg-transparent"
                             onClick={() => handleRating(star)}
                           >
                             <Star
